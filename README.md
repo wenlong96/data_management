@@ -13,7 +13,7 @@ For the purpose of this tutorial, we will build a MySQL database centered around
 A business description is an overview of a company or organization that provides essential information about its nature, purpose, and operations.
 <details>
 
-_<summary>Click to show/hide Business Description</summary>_
+***<summary>Click to show/hide Business Description</summary>***
 
 ```
 Q&M is the largest private dental healthcare group in Singapore that was established in 1966 and currently has more than 100 clinics island-wide which offers many dental services. Their appointment booking is done either through their website or calling, where customers can request appointments by indicating their time, service, and clinic preferences as well as personal details.
@@ -39,7 +39,7 @@ A good business rule is:
 - _A student may register for a course only if he or she has successfully completed the prerequisites for that course (good business rule)._
 <details>
 
-_<summary>Click to show/hide Business Requirements</summary>_
+***<summary>Click to show/hide Business Requirements</summary>***
 ```
 1. Q&M operates multiple branches of clinics across Singapore. Each clinic has a unique Branch ID and each clinic has a different location consisting of a general area and address.
 2. A clinic can have multiple rooms and each clinic has at least one room. Rooms at different clinics can have the same room number. To recognize each unique room, Q&M needs to track the room number and the clinic’s branch ID. Each room has a variety of equipment.
@@ -64,7 +64,7 @@ _<summary>Click to show/hide Business Requirements</summary>_
 Use cases serve as specific interactions or actions that users, or stakeholders, can engage in with the system to attain their objectives. These interactions play a vital role in comprehending the system's functionalities and how it effectively addresses the diverse needs of various stakeholders involved.
 <details>
 
-_<summary>Click to show/hide Use Case</summary>_
+***<summary>Click to show/hide Use Case</summary>***
 ```
 Q&M uses customer appointment booking data to cross check clinics and doctors availability, and contact the customer as soon as the appointment can be scheduled–therefore showing strong use cases of the system for customers, doctors, and clinic management.
 With the aim of optimising scheduling processes and reducing customer waiting time to fix a time for an appointment, we will build an Entity Relationship Model based on its existing booking form to improve the scheduling experience for both the customer and business.
@@ -166,7 +166,7 @@ Step 5: Create a Database and Add Tables:
 - Once connected to the MySQL server, we can now create our database and add tables. For more information about how to use MySQL, we can refer to their [official guide](https://dev.mysql.com/doc/refman/8.0/en/).
 <details>
 
-_<summary>Click to show/hide MySQL Codes to Create Database and Add Tables</summary>_
+***<summary>Click to show/hide MySQL Codes to Create Database and Add Tables</summary>***
 ```
 create database QMDBMS;
 use QMDBMS;
@@ -363,7 +363,7 @@ Step 6: Inserting Data:
 - Now that we have created our database and tables, we can add our data into the tables.
 <details>
 
-_<summary>Click to show/hide MySQL Codes to Insert Data</summary>_
+***<summary>Click to show/hide MySQL Codes to Insert Data</summary>***
 ```
 INSERT INTO
 medication 
@@ -2921,7 +2921,7 @@ Step 7: Testing the database:
 - For this, we will be answering one of the _use case_ we have came up with earlier such as finding leftover inventory information. For example, we can find out the medication name, quantity remaining in each clinic and its address. This will be useful for management who needs to manage the medication inventory of each clinic and decide when to make an order to replenish the stock. This is done by summing medicine purchased and subtracting medicine issued, according to medication name.
 <details>
 
-_<summary>Click to show/hide Click to show/hide MySQL Codes to Retrieve Leftover Inventory Information</summary>_
+***<summary>Click to show/hide Click to show/hide MySQL Codes to Retrieve Leftover Inventory Information</summary>***
 ```
 SELECT temp1.BranchID, temp1.LocationAddress, temp1.MedicationName, SUM(temp1.QuantityPurchased) - SUM(temp2.QuantityIssued) AS QuantityRemaining
 
