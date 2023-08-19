@@ -94,6 +94,8 @@ Nevertheless, the core components of an Entity Relationship Model encompass:
 
 Widely utilized in the initial phases of database design and system development, Entity Relationship Models offer a succinct representation of data structure and relationships. They prove invaluable in comprehending data requirements, designing efficient databases, and ensuring data integrity and consistency within the system. What appears in the ERM, whether it's the attributes or the cardinality, ultimately depends on the _Business Requirements_ defined previously.
 
+![Q M ER Diagram](https://github.com/wenlong96/data_management/assets/119576694/25597649-725e-4025-a06e-1f5a431b5862)
+
 ## Logical Design Diagram
 
 A logical design diagram serves as a visual representation that illustrates the high-level structure and organization of data in a database or information system. This conceptual model emphasizes the logical relationships between entities and the overall data flow within the system, without delving into specific implementation details, such as physical storage or hardware considerations.
@@ -112,6 +114,8 @@ A logical design diagram in 3NF should illustrate:
 - No Partial Dependencies: Ensure that non-key attributes are not dependent on only part of the primary key.
 
 A 3NF logical design diagram simplifies data retrieval, ensures data integrity, and minimizes data redundancy, resulting in an efficient and well-structured database. Following 3NF principles during the logical design phase helps create a robust foundation for the subsequent steps of database development, including the physical design and implementation stages.
+
+![LDD](https://github.com/wenlong96/data_management/assets/119576694/0292b7ea-fc64-497e-94e0-209bc7a6f6f4)
 
 ### Note:
 - _Green rectangle represents independent (parent) entity_
@@ -358,6 +362,8 @@ constraint invoice_medication_fk2 foreign key (MedicationID) references MEDICATI
 );
 ```
 </details>
+
+![QMDBMS](https://github.com/wenlong96/data_management/assets/119576694/ecd1b12a-3bfe-4d29-b057-b1a0a7387df0)
 
 Step 6: Inserting Data:
 - Now that we have created our database and tables, we can add our data into the tables.
@@ -2916,6 +2922,8 @@ VALUES
 
 - An example of how our Appointment Table looks like after inserting the data:
 
+![appointment_202307162236](https://github.com/wenlong96/data_management/assets/119576694/c6f32cb7-c8a7-4937-a5e5-0f1d0835334f)
+
 Step 7: Testing the database:
 - After we have created our tables and added our data into them, we can now test our database with some simple queries.
 - For this, we will be answering one of the _use case_ we have came up with earlier such as finding leftover inventory information. For example, we can find out the medication name, quantity remaining in each clinic and its address. This will be useful for management who needs to manage the medication inventory of each clinic and decide when to make an order to replenish the stock. This is done by summing medicine purchased and subtracting medicine issued, according to medication name.
@@ -2959,6 +2967,8 @@ GROUP BY temp1.branchid, temp1.LocationAddress, temp1.MedicationName
 ORDER BY temp1.branchid, temp1.LocationAddress, temp1.MedicationName
 ```
 </details>
+
+![_SELECT_temp1_BranchID_temp1_LocationAddress_temp1_MedicationNam_202307162254](https://github.com/wenlong96/data_management/assets/119576694/2e761b1c-e8d1-4b18-9bbb-a890f42dda43)
 
 ## What we have went through
 This tutorial has taken us on a journey through the dynamic world of database development, with a specific focus on creating a MySQL database from scratch. We've explored the essential steps involved in the process, from understanding and analyzing business requirements to designing and implementing a fully functional database.
